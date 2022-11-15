@@ -41,7 +41,7 @@ test("Invert Banner Image Colors", async () => {
   });
   await setTimeout(10);
   let banner = dom.window.document.getElementById("jumbo-image");
-  assert.is(dom.window.getComputedStyle(banner)._values["filter"], "invert(1)");
+  assert.ok(["invert(1)", "invert(100%)"].includes(dom.window.getComputedStyle(banner)._values["filter"]));
 });
 
 test("Tiles Need to be 2x2 Grid", async () => {
