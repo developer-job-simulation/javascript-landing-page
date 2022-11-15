@@ -25,24 +25,18 @@ addEventListener("submit", (event) => {
 
   let email = document.getElementById("email").value;
 
-  console.log("email is", email);
-  if (!email) {
-    renderEmailEmptyError();
-    return;
-  }
-  if (usersTable.find((user) => user.username === email)) {
-    renderEmailTakenError();
-  } else {
-    renderSuccess();
-    usersTable.push({ id: usersTable.length + 1, username: email });
-  }
+  // TODO: Show Correct Status Messages on Signup Form
+  // 1. successful signup
+  // 2. empty email
+  // 3. taken email
+  // 4. repeat email
 });
 
 let toggleNav = () => {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("show") == -1) {
-    x.className += " show";
+  var nav = document.getElementById("mobile-nav");
+  if (nav.className.indexOf("show") == -1) {
+    nav.className += " show";
   } else {
-    x.className = x.className.replace(" show", "");
+    nav.className = nav.className.replace(" show", "");
   }
 };
