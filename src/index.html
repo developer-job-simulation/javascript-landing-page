@@ -14,14 +14,6 @@
     <!-- TODO: Fix Issue, Nav Buttons Don't Work (Desktop & Mobile) -->
     <nav class="top">
       <div class="bar blue card left-align large">
-        <a
-          class="bar-item button hide-medium hide-large right padding-large hover-white large blue"
-          href="javascript:void(0);"
-          id="hamburger-button"
-          onclick="toggleNav()"
-          title="Toggle Navigation Menu"
-          ><i class="fa fa-bars"></i
-        ></a>
         <!-- TODO: Fix Issue, Desktop Nav Is Visible on Mobile -->
         <a id="nav-logo" href="#header" class="bar-item button padding-large white">JobSimulator.Dev</a>
         <a id="nav-challenges" href="#challenges" class="bar-item button padding-large hover-white">Browse Challenges</a>
@@ -29,10 +21,21 @@
       </div>
 
       <!-- Navbar on small screens -->
-      <div id="mobile-nav" href="#header" class="bar-block white hide hide-large hide-medium large">
+      <div 
+        id="mobile-nav" 
+        href="#header" 
+        class="bar-block white hide hide-large hide-medium large">
         <a id="mobile-nav-challenges" href="#challenges" class="bar-item button padding-large">Browse Challenges</a>
         <a id="mobile-nav-signup" href="#signup" class="bar-item button padding-large">Sign Up</a>
       </div>
+      <a
+      class="bar-item button hide-medium hide-large right padding-large hover-white large blue"
+      href="javascript:void(0);"
+      id="hamburger-button"
+      onclick="toggleNav()"
+      title="Toggle Navigation Menu"
+      ><i class="fa fa-bars"></i
+    ></a>
     </nav>
 
     <!-- Header -->
