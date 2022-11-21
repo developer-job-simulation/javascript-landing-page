@@ -39,7 +39,7 @@ test("Invert Banner Image Colors", async () => {
     runScripts: "dangerously",
     resources: "usable",
   });
-  await setTimeout(10);
+  await setTimeout(150);
   let banner = dom.window.document.getElementById("jumbo-image");
   assert.ok(["invert(1)", "invert(100%)"].includes(dom.window.getComputedStyle(banner)._values["filter"]));
 });
