@@ -36,9 +36,11 @@ addEventListener("submit", (event) => {
   // 4. repeat email
 
   if(email === ''){return renderEmailEmptyError()}
-  else if(tableValues.forEach(x => x === true)){console.log(x)} 
+  else if(tableValues.includes(true)){return renderEmailTakenError()} 
+  // else if(email === email){return renderEmailTakenError()}
+  else{return renderSuccess()}
  
-
+11
 
 
 
