@@ -37,8 +37,8 @@ addEventListener("submit", (event) => {
 
   if(email === ''){return renderEmailEmptyError()}
   else if(tableValues.includes(true)){return renderEmailTakenError()} 
-  // else if(email === email){return renderEmailTakenError()}
-  else{return renderSuccess()}
+  else if(email === email){usersTable.push({username:`${email}`}); renderSuccess()}
+  
  
 11
 
