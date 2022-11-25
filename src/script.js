@@ -30,12 +30,16 @@ addEventListener("submit", (event) => {
     return;
   }
 
-  if (!usersTable.map((user) => user.username === email).includes(true)) {
-    renderSuccess();
-    usersTable.push({ username: email });
-  } else {
-    renderEmailTakenError();
+  for (var i = 0; i < usersTable.length; i++) {
+    if (usersTable[i].username === email) {
+      renderEmailTakenError();
+      return;
+    }
   }
+
+  usersTable.push({ username: email });
+  renderSuccess();
+  return;
 });
 
 let toggleNav = () => {
