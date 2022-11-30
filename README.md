@@ -14,12 +14,12 @@ This is a landing page written in HTML/CSS/JS. Your job is to fix these issues:
 
 You will learn and gain experience with:
 
-- [Linking to Page Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
-- [Mobile Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [CSS Filters](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
-- [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)
-- [Clientside Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
-- Navigating a Large, Messy CSS File
+-   [Linking to Page Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+-   [Mobile Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+-   [CSS Filters](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+-   [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)
+-   [Clientside Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+-   Navigating a Large, Messy CSS File
 
 ## How to start working
 
