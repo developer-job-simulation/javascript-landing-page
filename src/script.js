@@ -42,10 +42,9 @@ addEventListener('submit', (event) => {
       }
     });
     if (taken) {
-      console.log(taken);
       return renderEmailTakenError();
     } else {
-      console.log(taken);
+      usersTable.push({ username: email });
       return renderSuccess();
     }
   }

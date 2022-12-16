@@ -94,7 +94,7 @@ test('Improve Errors on Signup Form Validation (Empty Email)', async () => {
     runScripts: 'dangerously',
     resources: 'usable',
   });
-  await setTimeout(150); // Need to wait for script to load
+  await setTimeout(1500); // Need to wait for script to load
 
   // simulate empty email signup
   dom.window.document
@@ -117,7 +117,7 @@ test('Improve Errors on Signup Form Validation (Taken Email)', async () => {
     runScripts: 'dangerously',
     resources: 'usable',
   });
-  await setTimeout(150); // Need to wait for script to load
+  await setTimeout(1500); // Need to wait for script to load
 
   dom.window.document.getElementById('email').value = 'hello@world.com';
   dom.window.document
@@ -140,7 +140,7 @@ test('Improve Errors on Signup Form Validation (Repeat Email)', async () => {
     runScripts: 'dangerously',
     resources: 'usable',
   });
-  await setTimeout(150); // Need to wait for script to load
+  await setTimeout(1500); // Need to wait for script to load
 
   dom.window.document.getElementById('email').value = 'test@new.com';
   dom.window.document
