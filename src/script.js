@@ -26,7 +26,10 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
   if(!email.length) renderEmailEmptyError()
   else if(usersTable.find(x => x.username == email)) renderEmailTakenError()
-  else renderSuccess()
+  else {
+    usersTable.push({username:email})
+    renderSuccess()
+  }
   
   // TODO: Show Correct Status Messages on Signup Form
   // 1. successful signup
