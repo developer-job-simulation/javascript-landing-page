@@ -24,19 +24,39 @@ addEventListener("submit", (event) => {
   resetMessage();
 
   let email = document.getElementById("email").value;
-
   // TODO: Show Correct Status Messages on Signup Form
   // 1. successful signup
   // 2. empty email
   // 3. taken email
   // 4. repeat email
+  if (!email) {
+    renderEmailEmptyError();
+  } else {
+    // check for taken email
+    const takenEmail = usersTable.some(user => user.username === email);
+    if (takenEmail) {
+      renderEmailTakenError();
+    } else {
+      // check for repeat email
+      if(sessionStorage.getItem('email')=== email){
+        renderEmailTakenError();
+      }else{
+      // add the email to the users table
+      usersTable.push({username: email});
+      sessionStorage.setItem('email',email)
+      // log success message
+      renderSuccess();
+      }
+    }
+  }
+
 });
 
 let toggleNav = () => {
   var nav = document.getElementById("mobile-nav");
   if (nav.className.indexOf("show") == -1) {
     nav.className += " show";
-  } else {
+  } else {  
     nav.className = nav.className.replace(" show", "");
   }
 };

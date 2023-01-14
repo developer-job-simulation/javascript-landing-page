@@ -670,9 +670,14 @@ form > span {
 #jumbo-image {
   max-height: 20rem;
   /* TODO: Invert banner colors using CSS */
+    filter: invert(100%);
 }
 
 @media (max-width: 600px) {
+  #nav-challenges,
+  #nav-signup{
+    display: none;
+  }
   .modal-content {
     margin: 0 10px;
     width: auto !important;
@@ -694,7 +699,8 @@ form > span {
   .bar-item.mobile,
   .dropdown-hover.mobile,
   .dropdown-click.mobile {
-    text-align: center;
+    text-align: right;
+
   }
   .dropdown-hover.mobile,
   .dropdown-hover.mobile .btn,
@@ -877,7 +883,7 @@ form > span {
 #challenge-grid {
   display: grid;
   /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
-  grid-template-columns: none;
+  grid-template-columns: 2fr 2fr;
   grid-auto-rows: 10rem;
   gap: 1rem;
   padding-top: 2rem;
