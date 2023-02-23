@@ -1,4 +1,4 @@
-![](./banner.svg)
+![JavaScript-Landing-Page-by-JobSimulator](https://user-images.githubusercontent.com/2349518/221033990-434446d9-0122-487b-8ba3-bda5326a6cd2.svg)
 
 # JavaScript Landing Page by Jobsimulator.dev
 
