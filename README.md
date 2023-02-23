@@ -1,6 +1,6 @@
 ![](./banner.svg)
 
-# Vanilla Landing Page by Jobsimulator.dev
+# JavaScript Landing Page by Jobsimulator.dev
 
 This is a landing page written in HTML/CSS/JS. Your job is to fix these issues:
 
