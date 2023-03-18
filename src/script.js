@@ -28,9 +28,9 @@ addEventListener('submit', (event) => {
 		? renderEmailTakenError()
 		: email.length != 0 && renderSuccess();
 	email.length === 0 && renderEmailEmptyError();
-	setInterval(() => {
+	
 		resetMessage();
-	}, 3000);
+
 });
 
 let toggleNav = () => {
