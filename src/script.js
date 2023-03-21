@@ -20,17 +20,16 @@ let resetMessage = () => {
 };
 
 addEventListener('submit', (event) => {
-	// event.preventDefault();
+	event.preventDefault();
 	let email = document.getElementById('email').value;
 	// TODO: Show Correct Status Messages on Signup Form
-
 	usersTable.filter((users) => users.username === email).length != 0
 		? renderEmailTakenError()
 		: email.length != 0 && renderSuccess();
 	email.length === 0 && renderEmailEmptyError();
-	
+	setTimeout(() => {
 		resetMessage();
-
+	}, 3000);
 });
 
 let toggleNav = () => {
