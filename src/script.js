@@ -1,4 +1,4 @@
-const usersTable = [
+let usersTable = [
 	// Note: This is a fake table for educational purposes. Never store user credentials in plain text.
 	{ username: 'hello@world.com' },
 	{ username: 'test@user.com' },
@@ -21,15 +21,15 @@ let resetMessage = () => {
 
 addEventListener('submit', (event) => {
 	event.preventDefault();
+	resetMessage();
 	let email = document.getElementById('email').value;
 	// TODO: Show Correct Status Messages on Signup Form
-	usersTable.filter((users) => users.username === email).length != 0
-		? renderEmailTakenError()
-		: email.length != 0 && renderSuccess();
 	email.length === 0 && renderEmailEmptyError();
-	setTimeout(() => {
-		resetMessage();
-	}, 3000);
+	if (email.length != 0) {
+		usersTable.filter((users) => users.username === email).length != 0
+			? renderEmailTakenError()
+			: usersTable.push({ username: email }) && renderSuccess();
+	}
 });
 
 let toggleNav = () => {
