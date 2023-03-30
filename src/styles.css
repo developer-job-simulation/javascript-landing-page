@@ -669,10 +669,12 @@ form > span {
 
 #jumbo-image {
   max-height: 20rem;
+  filter: invert(1)
+
   /* TODO: Invert banner colors using CSS */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 980px) {
   .modal-content {
     margin: 0 10px;
     width: auto !important;
@@ -877,7 +879,7 @@ form > span {
 #challenge-grid {
   display: grid;
   /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
-  grid-template-columns: none;
+  grid-template-columns: auto auto;
   grid-auto-rows: 10rem;
   gap: 1rem;
   padding-top: 2rem;
