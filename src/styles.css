@@ -879,7 +879,7 @@ form > span {
 #challenge-grid {
   display: grid;
   /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
-  grid-template-columns: auto auto;
+  grid-template-columns: 400px 400px;
   grid-auto-rows: 10rem;
   gap: 1rem;
   padding-top: 2rem;
