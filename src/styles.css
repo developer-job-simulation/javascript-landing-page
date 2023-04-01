@@ -33,6 +33,7 @@ a {
 }
 img {
   border-style: none;
+  filter: invert(100%); /* Inverted all colors */
 }
 
 button,
@@ -877,7 +878,7 @@ form > span {
 #challenge-grid {
   display: grid;
   /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
-  grid-template-columns: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /*made grid 2x2 */
   grid-auto-rows: 10rem;
   gap: 1rem;
   padding-top: 2rem;
