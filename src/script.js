@@ -30,6 +30,17 @@ addEventListener("submit", (event) => {
   // 2. empty email
   // 3. taken email
   // 4. repeat email
+
+  if (email === "") {
+    renderEmailEmptyError(); // 2. empty email
+  } else if (usersTable.some((user) => user.username === email)) {
+    renderEmailTakenError(); // 3. taken email
+  } else {
+    usersTable.push({ username: email });
+    renderSuccess(); // 1. successful signup, which pushes the email to the usersTable. This means that whenever the user tries to sign up with the same email, it will be rejected as a repeat email, solving 4. repeat email.
+  }
+
+  
 });
 
 let toggleNav = () => {
