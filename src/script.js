@@ -19,11 +19,30 @@ let resetMessage = () => {
   document.getElementById("empty-error-message").hidden = true;
 };
 
+function pushUserToArray(usersTable,email){
+  usersTable.push({username:email})
+  renderSuccess()
+
+}
+
+
+
 addEventListener("submit", (event) => {
   event.preventDefault();
-  resetMessage();
+ resetMessage()
 
   let email = document.getElementById("email").value;
+ 
+  if(email === ''){
+    renderEmailEmptyError()
+  }else{
+    var index = usersTable.findIndex(x => x.username == email)
+    index === -1 ? pushUserToArray(usersTable,email): renderEmailTakenError()
+
+  }
+
+
+  console.log(usersTable)
 
   // TODO: Show Correct Status Messages on Signup Form
   // 1. successful signup
