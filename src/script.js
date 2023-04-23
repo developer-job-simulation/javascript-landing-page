@@ -23,22 +23,16 @@ addEventListener("submit", (event) => {
     event.preventDefault();
     resetMessage();
 
-    let emailFromHtml = document.getElementById("email")
+    let emailFromHtml = document.getElementById("email").value;
 
-
-    function emailVerification(emailFromHtml, usersTable) {
-        if (emailFromHtml === "") {
-            renderEmailEmptyError();
-        } else if (usersTable.some(user => user.username === emailFromHtml)) {
-            renderEmailTakenError();
-        } else {
-            usersTable.push({username: emailFromHtml});
-            renderSuccess();
-        }
-
+    if (emailFromHtml === "") {
+        renderEmailEmptyError();
+    } else if (usersTable.some((user) => user.username === emailFromHtml)) {
+        renderEmailTakenError();
+    } else {
+        usersTable.push({username: emailFromHtml});
+        renderSuccess();
     }
-
-    emailVerification(emailFromHtml, usersTable);
 
 
     // TODO: Show Correct Status Messages on Signup Form
