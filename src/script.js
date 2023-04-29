@@ -26,10 +26,35 @@ addEventListener("submit", (event) => {
   let email = document.getElementById("email").value;
 
   // TODO: Show Correct Status Messages on Signup Form
-  // 1. successful signup
+  
+  
   // 2. empty email
+  if (email.length == 0){
+    renderEmailEmptyError();
+    return;
+  }
   // 3. taken email
+  for(let i=0; i<usersTable.length; i++){
+    if (usersTable[i].username == email){
+      renderEmailTakenError();
+      break;
+    }
+  }
   // 4. repeat email
+
+  // 1. successful signup
+  {
+    let i=0;
+    for(; i<usersTable.length; i++){
+      if (usersTable[i].username == email){
+        break;
+      }
+    }
+    if (i == usersTable.length){
+      renderSuccess();
+      usersTable.push({username:email});
+    } 
+  }
 });
 
 let toggleNav = () => {
