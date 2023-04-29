@@ -30,6 +30,23 @@ addEventListener("submit", (event) => {
   // 2. empty email
   // 3. taken email
   // 4. repeat email
+  function isNewEmail(username) {
+    return username.username === email;
+  }
+
+  if (!email) {
+    return renderEmailEmptyError();
+  }
+
+  const user = usersTable.find(isNewEmail);
+
+  if (usersTable.indexOf(user) !== -1) {
+    return renderEmailTakenError()
+  }
+  
+  usersTable.push({"username": email})
+  return renderSuccess();
+  
 });
 
 let toggleNav = () => {
