@@ -704,10 +704,10 @@ form > span {
   .dropdown-click.mobile .button {
     width: 100%;
   }
-  #nav-signup,
+  /* #nav-signup,
   #nav-challenges {
     display: none !important;
-  }
+  } */
 }
 @media (max-width: 768px) {
   .modal-content {
