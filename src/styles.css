@@ -55,22 +55,22 @@ select {
   text-transform: none;
 }
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 fieldset {
@@ -88,19 +88,19 @@ legend {
 textarea {
   overflow: auto;
 }
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   padding: 0;
 }
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 ::-webkit-file-upload-button {
@@ -153,7 +153,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 400;
   margin: 10px 0;
 }
@@ -487,7 +487,7 @@ form > span {
 .clear:before,
 .bar:before,
 .bar:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -669,7 +669,7 @@ form > span {
 
 #jumbo-image {
   max-height: 20rem;
-  /* TODO: Invert banner colors using CSS */
+  filter: invert(1);
 }
 
 @media (max-width: 600px) {
@@ -704,6 +704,10 @@ form > span {
   .dropdown-click.mobile .button {
     width: 100%;
   }
+  /* #nav-signup,
+  #nav-challenges {
+    display: none !important;
+  } */
 }
 @media (max-width: 768px) {
   .modal-content {
@@ -870,14 +874,13 @@ form > span {
 }
 .code,
 .codespan {
-  font-family: Consolas, "courier new";
+  font-family: Consolas, 'courier new';
   font-size: 16px;
 }
 
 #challenge-grid {
   display: grid;
-  /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
-  grid-template-columns: none;
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: 10rem;
   gap: 1rem;
   padding-top: 2rem;
