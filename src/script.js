@@ -24,10 +24,16 @@ addEventListener('submit', (event) => {
 
   let email = document.getElementById('email').value;
 
-  if (!email || email.length === 0) renderEmailEmptyError();
-  else if (usersTable.some((user) => user.username === email))
+  console.log(email);
+
+  if (!email || email.length === 0) {
+    renderEmailEmptyError();
+  } else if (usersTable.some((user) => user.username === email)) {
     renderEmailTakenError();
-  else renderSuccess();
+  } else {
+    renderSuccess();
+    usersTable.push({ username: email });
+  }
 });
 
 let toggleNav = () => {
