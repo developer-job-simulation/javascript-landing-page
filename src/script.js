@@ -25,11 +25,31 @@ addEventListener("submit", (event) => {
 
   let email = document.getElementById("email").value;
 
-  // TODO: Show Correct Status Messages on Signup Form
-  // 1. successful signup
-  // 2. empty email
-  // 3. taken email
-  // 4. repeat email
+  // Check if the email is empty, and if is, render empty error.
+  if (!email) {
+    renderEmailEmptyError();
+  } else {
+    // If it is not empty, check if already exists.
+    // This is just a boolean flag.
+    let emailExists = false;
+    // Check if the email already existe in the usersTable array.
+    for (const obj of usersTable) {
+      if (obj.username === email) {
+        // If the email exists, toggle flag and break cycle.
+        emailExists = true;
+        break;
+      }
+    }
+
+    // If the email exists, render error.
+    if (emailExists) {
+      renderEmailTakenError();
+    } else {
+      // Otherwise, save the email to the usersTable array and render success.
+      usersTable.push({ username: email });
+      renderSuccess();
+    }
+  }
 });
 
 let toggleNav = () => {
