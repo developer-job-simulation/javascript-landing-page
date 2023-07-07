@@ -24,6 +24,23 @@ addEventListener("submit", (event) => {
   resetMessage();
 
   let email = document.getElementById("email").value;
+  
+  //   if empty give error
+  if (email.length === 0){
+    renderEmailEmptyError();
+    return null;
+  }
+
+  const user = usersTable.find(user => user.username === email);
+
+  if (user){
+    //   if taken already taken, repeat also same case
+    renderEmailTakenError();
+  }else{
+    //   succesful signup where email doesnt exist and is correct, add user
+    usersTable.push({username: email});
+    renderSuccess();
+  }
 
   // TODO: Show Correct Status Messages on Signup Form
   // 1. successful signup
@@ -34,6 +51,7 @@ addEventListener("submit", (event) => {
 
 let toggleNav = () => {
   var nav = document.getElementById("mobile-nav");
+  console.log(nav.className)
   if (nav.className.indexOf("show") == -1) {
     nav.className += " show";
   } else {
