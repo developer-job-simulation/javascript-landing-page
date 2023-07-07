@@ -38,8 +38,8 @@ addEventListener("submit", (event) => {
     renderEmailTakenError();
   }else{
     //   succesful signup where email doesnt exist and is correct, add user
-    usersTable.push({username: email});
     renderSuccess();
+    usersTable.push({username: email});
   }
 
   // TODO: Show Correct Status Messages on Signup Form

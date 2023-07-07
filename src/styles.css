@@ -671,7 +671,7 @@ form > span {
 #jumbo-image {
   max-height: 20rem;
   /* TODO: Invert banner colors using CSS */
-  filter: invert();
+  filter: invert(1);
 }
 
 @media (max-width: 600px) {
