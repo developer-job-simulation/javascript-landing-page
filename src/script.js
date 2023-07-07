@@ -42,7 +42,7 @@ addEventListener("submit", (event) => {
     usersTable.push({username: email});
   }
 
-  // TODO: Show Correct Status Messages on Signup Form
+  // Done: Show Correct Status Messages on Signup Form
   // 1. successful signup
   // 2. empty email
   // 3. taken email
