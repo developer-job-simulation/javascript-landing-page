@@ -675,10 +675,6 @@ form > span {
 }
 
 @media (max-width: 600px) {
-    #nav-challenges,
-    #nav-signup {
-        display: none;
-    }
     .modal-content {
         margin: 0 10px;
         width: auto !important;
