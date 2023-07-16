@@ -4,8 +4,14 @@
     <meta charset="utf-8" />
     <title>JobSimulator.Dev</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="script.js"></script>
   </head>
 
@@ -23,23 +29,57 @@
           ><i class="fa fa-bars"></i
         ></a>
         <!-- TODO: Fix Issue, Desktop Nav Is Visible on Mobile -->
-        <a id="nav-logo" class="bar-item button padding-large white">JobSimulator.Dev</a>
-        <a id="nav-challenges" class="bar-item button padding-large hover-white">Browse Challenges</a>
-        <a id="nav-signup" class="bar-item button padding-large hover-white">Sign Up</a>
+        <a
+          href="#header"
+          id="nav-logo"
+          class="bar-item button padding-large white"
+          >JobSimulator.Dev</a
+        >
+        <a
+          href="#challenges"
+          id="nav-challenges"
+          class="bar-item button padding-large hover-white hide-small"
+          >Browse Challenges</a
+        >
+        <a
+          href="#signup"
+          id="nav-signup"
+          class="bar-item button padding-large hover-white hide-small"
+          >Sign Up</a
+        >
       </div>
 
       <!-- Navbar on small screens -->
-      <div id="mobile-nav" class="bar-block white hide hide-large hide-medium large">
-        <a id="mobile-nav-challenges" class="bar-item button padding-large">Browse Challenges</a>
-        <a id="mobile-nav-signup" class="bar-item button padding-large">Sign Up</a>
+      <div
+        id="mobile-nav"
+        class="bar-block white hide hide-large hide-medium large"
+      >
+        <a
+          href="#challenges"
+          id="mobile-nav-challenges"
+          class="bar-item button padding-large"
+          >Browse Challenges</a
+        >
+        <a
+          href="#signup"
+          id="mobile-nav-signup"
+          class="bar-item button padding-large"
+          >Sign Up</a
+        >
       </div>
     </nav>
 
     <!-- Header -->
-    <header id="header" class="container white center" style="padding: 128px 16px">
+    <header
+      id="header"
+      class="container white center"
+      style="padding: 128px 16px"
+    >
       <img id="jumbo-image" src="./banner-image.png" />
       <h1 class="margin jumbo">Want to test your software dev skills?</h1>
-      <a href="#signup" class="button blue padding-large large margin-top">Sign Up</a>
+      <a href="#signup" class="button blue padding-large large margin-top"
+        >Sign Up</a
+      >
     </header>
 
     <section id="challenges" class="row-padding pink padding-256 container">
@@ -52,13 +92,22 @@
             href="https://github.com/developer-job-simulation/vanilla-login-form"
             >Vanilla Login Form</a
           >
-          <a target="_blank" class="challenge-tile" href="https://github.com/developer-job-simulation/vanilla-table"
+          <a
+            target="_blank"
+            class="challenge-tile"
+            href="https://github.com/developer-job-simulation/vanilla-table"
             >Vanilla Table</a
           >
-          <a target="_blank" class="challenge-tile" href="https://github.com/developer-job-simulation/react-ecommerce"
+          <a
+            target="_blank"
+            class="challenge-tile"
+            href="https://github.com/developer-job-simulation/react-ecommerce"
             >React Ecommerce</a
           >
-          <a target="_blank" class="challenge-tile" href="https://github.com/developer-job-simulation/react-mui-table"
+          <a
+            target="_blank"
+            class="challenge-tile"
+            href="https://github.com/developer-job-simulation/react-mui-table"
             >React Table</a
           >
         </div>
@@ -70,9 +119,15 @@
         <div id="signup-form">
           <h1>Sign Up & Get Started</h1>
           <form>
-            <span id="success-message" class="success-message" hidden="true">Success!</span>
-            <span id="taken-error-message" class="error-message" hidden="true">Error: Email Already Taken</span>
-            <span id="empty-error-message" class="error-message" hidden="true">Error: Email Address Empty.</span>
+            <span id="success-message" class="success-message" hidden="true"
+              >Success!</span
+            >
+            <span id="taken-error-message" class="error-message" hidden="true"
+              >Error: Email Already Taken</span
+            >
+            <span id="empty-error-message" class="error-message" hidden="true"
+              >Error: Email Address Empty.</span
+            >
             <input id="email" type="email" placeholder="Enter your email" />
             <button>Submit</button>
           </form>
