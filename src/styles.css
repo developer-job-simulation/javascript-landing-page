@@ -536,7 +536,7 @@ form > span {
 .col.s12 {
   width: 99.99999%;
 }
-@media (min-width: 601px) {
+@media screen and (min-width: 601px) {
   .col.m1 {
     width: 8.33333%;
   }
@@ -579,7 +579,7 @@ form > span {
     width: 99.99999%;
   }
 }
-@media (min-width: 993px) {
+@media screen and (min-width: 993px) {
   .col.l1 {
     width: 8.33333%;
   }
@@ -661,7 +661,7 @@ form > span {
 .show-inline-block {
   display: inline-block !important;
 }
-@media (max-width: 1205px) {
+@media screen and (max-width: 1205px) {
   .auto {
     max-width: 95%;
   }
@@ -672,7 +672,7 @@ form > span {
   /* TODO: Invert banner colors using CSS */
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .modal-content {
     margin: 0 10px;
     width: auto !important;
@@ -705,7 +705,7 @@ form > span {
     width: 100%;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .modal-content {
     width: 500px;
   }
@@ -713,7 +713,7 @@ form > span {
     padding-top: 50px;
   }
 }
-@media (min-width: 993px) {
+@media screen and (min-width: 993px) {
   .modal-content {
     width: 900px;
   }
@@ -724,12 +724,12 @@ form > span {
     display: block !important;
   }
 }
-@media (max-width: 992px) and (min-width: 601px) {
+@media screen and (max-width: 992px) and (min-width: 601px) {
   .hide-medium {
     display: none !important;
   }
 }
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .sidebar.collapse {
     display: none;
   }
