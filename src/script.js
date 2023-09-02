@@ -64,3 +64,15 @@ addEventListener("submit", (event) => {
         }
     
 });
+
+
+let toggleNav = () => {
+  var nav = document.getElementById("mobile-nav");
+  if (nav.className.indexOf("show") == -1) {
+    nav.className += " show";
+  } else {
+    nav.className = nav.className.replace(" show", "");
+  }
+};
+
+
