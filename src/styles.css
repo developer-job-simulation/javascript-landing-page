@@ -669,8 +669,9 @@ form > span {
 
 #jumbo-image {
   max-height: 20rem;
-  /* TODO: Invert banner colors using CSS */
+  filter: invert(100%); /* Inverts all colors to create a color-negative effect */
 }
+
 
 @media (max-width: 600px) {
   .modal-content {
@@ -876,8 +877,7 @@ form > span {
 
 #challenge-grid {
   display: grid;
-  /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
-  grid-template-columns: none;
+  grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid with equal width columns */
   grid-auto-rows: 10rem;
   gap: 1rem;
   padding-top: 2rem;
@@ -1478,3 +1478,20 @@ form > span {
 .success-message {
   color: green;
 }
+
+.nav-logo {
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  #nav-challenges {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #nav-signup {
+    display: none;
+  }
+}
+
