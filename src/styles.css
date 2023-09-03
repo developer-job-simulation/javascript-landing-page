@@ -713,12 +713,6 @@ form > span {
   .modal {
     padding-top: 50px;
   }
-  #nav-challenges {
-    display:none
-  }
-  #nav-signup {
-    display:none
-  }
   
 }
 @media (min-width: 993px) {
