@@ -713,6 +713,13 @@ form > span {
   .modal {
     padding-top: 50px;
   }
+  #nav-challenges {
+    display:none
+  }
+  #nav-signup {
+    display:none
+  }
+  
 }
 @media (min-width: 993px) {
   .modal-content {
@@ -724,6 +731,8 @@ form > span {
   .sidebar.collapse {
     display: block !important;
   }
+
+
 }
 @media (max-width: 992px) and (min-width: 601px) {
   .hide-medium {
@@ -1477,17 +1486,5 @@ form > span {
 
 .success-message {
   color: green;
-}
-
-@media screen and (max-width: 768px) {
-  #nav-challenges {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #nav-signup {
-    display: none;
-  }
 }
 
