@@ -30,6 +30,23 @@ addEventListener('submit', (event) => {
 	// 2. empty email
 	// 3. taken email
 	// 4. repeat email
+
+	if (email === '') {
+		return renderEmailEmptyError();
+	}
+	for (user of usersTable) {
+		console.log(user.username);
+		if (user.username === email) {
+			return renderEmailTakenError();
+		}
+	}
+
+	let newUser = {
+		username: email,
+	};
+	usersTable.push(newUser);
+	console.log(usersTable);
+	return renderSuccess();
 });
 
 let toggleNav = () => {
