@@ -35,7 +35,6 @@ addEventListener('submit', (event) => {
 		return renderEmailEmptyError();
 	}
 	for (user of usersTable) {
-		console.log(user.username);
 		if (user.username === email) {
 			return renderEmailTakenError();
 		}
@@ -44,7 +43,6 @@ addEventListener('submit', (event) => {
 		username: email,
 	};
 	usersTable.push(newUser);
-	console.log(usersTable);
 	return renderSuccess();
 });
 
@@ -55,5 +53,4 @@ let toggleNav = () => {
 	} else {
 		nav.className = nav.className.replace(' show', '');
 	}
-	console.log('clicked!');
 };
