@@ -40,7 +40,6 @@ addEventListener('submit', (event) => {
 			return renderEmailTakenError();
 		}
 	}
-
 	let newUser = {
 		username: email,
 	};
