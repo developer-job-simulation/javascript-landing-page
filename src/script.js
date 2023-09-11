@@ -33,6 +33,7 @@ addEventListener("submit", (event) => {
 });
 
 let toggleNav = () => {
+  console.log("click");
   var nav = document.getElementById("mobile-nav");
   if (nav.className.indexOf("show") == -1) {
     nav.className += " show";
