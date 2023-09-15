@@ -63,6 +63,41 @@ addEventListener("submit", (event) => {
 
         }
     
+
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+var navChallenges = document.getElementById("nav-challenges");
+var navSignup = document.getElementById("nav-signup");
+
+// Function to hide the navigation buttons on small screens
+function hideNavigationButtons() {
+  navChallenges.style.display = "none";
+  navSignup.style.display = "none";
+}
+
+// Function to show the navigation buttons on larger screens
+function showNavigationButtons() {
+  navChallenges.style.display = "inline-block";
+  navSignup.style.display = "inline-block";
+}
+
+// Check the screen size and initially hide/show the navigation buttons
+if (window.innerWidth <= 798) { // Adjust the screen width as needed
+  hideNavigationButtons();
+}
+
+// Add an event listener to check and toggle visibility on window resize
+window.addEventListener("resize", function () {
+  if (window.innerWidth <= 798) { // Adjust the screen width as needed
+    hideNavigationButtons();
+  } else {
+    showNavigationButtons();
+  }
+});
+
 });
 
 let toggleNav = () => {
@@ -73,6 +108,8 @@ let toggleNav = () => {
     nav.className = nav.className.replace(" show", "");
   }
 };
+
+
 
 
 

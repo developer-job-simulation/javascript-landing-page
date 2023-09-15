@@ -669,7 +669,7 @@ form > span {
 
 #jumbo-image {
   max-height: 20rem;
-  filter: invert(100%); /* Inverts all colors to create a color-negative effect */
+  filter: invert(100%); /* Inverts all colors */
 }
 
 
@@ -713,13 +713,6 @@ form > span {
   .modal {
     padding-top: 50px;
   }
-  #nav-challenges {
-    display:none
-  }
-  #nav-signup {
-    display:none
-  }
-  
 }
 @media (min-width: 993px) {
   .modal-content {
