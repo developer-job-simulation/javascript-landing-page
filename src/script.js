@@ -24,15 +24,18 @@ addEventListener("submit", (event) => {
   resetMessage();
 
   let email = document.getElementById("email").value;
-
-  // TODO: Show Correct Status Messages on Signup Form
-  // 1. successful signup
-  // 2. empty email
-  // 3. taken email
-  // 4. repeat email
+  if (usersTable.map((users) => users.username).includes(email)) {
+    renderEmailTakenError();
+  } else if (email === "") {
+    renderEmailEmptyError();
+  } else {
+    usersTable.push({ username: email });
+    renderSuccess();
+  }
 });
 
 let toggleNav = () => {
+  console.log("click");
   var nav = document.getElementById("mobile-nav");
   if (nav.className.indexOf("show") == -1) {
     nav.className += " show";
