@@ -669,7 +669,7 @@ form > span {
 
 #jumbo-image {
   max-height: 20rem;
-  filter: invert(95%);
+  filter: invert(1);
 }
 
 @media (max-width: 600px) {
