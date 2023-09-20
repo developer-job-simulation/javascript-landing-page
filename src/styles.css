@@ -706,7 +706,7 @@ form > span {
   .dropdown-click.mobile .button {
     width: 100%;
   }
-  #nav-logo, #nav-challenges, #nav-signup {
+  #nav-challenges, #nav-signup {
     display: none;
   }
 
