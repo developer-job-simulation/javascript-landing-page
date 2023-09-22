@@ -25,6 +25,27 @@ addEventListener("submit", (event) => {
 
   let email = document.getElementById("email").value;
 
+  let emailExists = false;
+
+  if(!email) {
+    renderEmailEmptyError();
+  } else {
+    for(const obj of usersTable) {
+      if(obj.username == email.toLowerCase()) {
+          emailExists = true;
+          break;
+      }
+    }
+    if(emailExists) {
+      renderEmailTakenError();
+    } else {
+      usersTable.push({ username: email });
+      renderSuccess();
+    }
+  }
+
+
+
   // TODO: Show Correct Status Messages on Signup Form
   // 1. successful signup
   // 2. empty email
