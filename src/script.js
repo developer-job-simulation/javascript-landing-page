@@ -30,6 +30,18 @@ addEventListener("submit", (event) => {
   // 2. empty email
   // 3. taken email
   // 4. repeat email
+  let inputUser = {username: email};
+  let foundUser = usersTable.findIndex((user) => user.username === inputUser.username);
+  
+  if(email === "") {
+    renderEmailEmptyError();
+  } else if(foundUser != -1) {
+    renderEmailTakenError();    
+  } else {
+    renderSuccess();
+    usersTable.push(inputUser);
+  }
+
 });
 
 let toggleNav = () => {
