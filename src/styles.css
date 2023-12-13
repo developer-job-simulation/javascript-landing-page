@@ -669,7 +669,8 @@ form > span {
 
 #jumbo-image {
   max-height: 20rem;
-  /* TODO: Invert banner colors using CSS */
+  /* DONE TODO: Invert banner colors using CSS */
+  filter: invert(100%); 
 }
 
 @media (max-width: 600px) {
@@ -876,8 +877,8 @@ form > span {
 
 #challenge-grid {
   display: grid;
-  /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
-  grid-template-columns: none;
+  /* DONE TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
+  grid-template-columns: auto auto;
   grid-auto-rows: 10rem;
   gap: 1rem;
   padding-top: 2rem;
