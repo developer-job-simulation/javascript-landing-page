@@ -25,19 +25,21 @@ addEventListener("submit", (event) => {
 
   let email = document.getElementById("email").value;
 
-  if(JSON.stringify(usersTable).includes(email))
-  {
-    renderEmailTakenError();
-  }
-  else
-  {
-    renderSuccess();
-    usersTable.push(email);
-  }
-
-  if(email === '')
+  if(!email)
   {
     renderEmailEmptyError();
+  }
+  else 
+  {
+    if(JSON.stringify(usersTable).includes(email))
+    {
+      renderEmailTakenError();
+    }
+    else
+    {
+      renderSuccess();
+      usersTable.push(email);
+    }
   }
 });
 
