@@ -35,7 +35,7 @@ addEventListener("submit", (event) => {
     usersTable.push(email);
   }
 
-  if(email == '')
+  if(email === '')
   {
     renderEmailEmptyError();
   }
