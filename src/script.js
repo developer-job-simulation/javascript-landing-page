@@ -25,11 +25,14 @@ addEventListener("submit", (event) => {
 
   let email = document.getElementById("email").value;
 
-  // TODO: Show Correct Status Messages on Signup Form
-  // 1. successful signup
-  // 2. empty email
-  // 3. taken email
-  // 4. repeat email
+  if (email === "") {
+    renderEmailEmptyError();
+  } else if (usersTable.find(user => user.username === email)) {
+    renderEmailTakenError();
+  } else {
+    renderSuccess();
+    usersTable.push({ username: email });
+  }
 });
 
 let toggleNav = () => {
