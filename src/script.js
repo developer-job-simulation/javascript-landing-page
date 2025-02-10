@@ -19,18 +19,41 @@ let resetMessage = () => {
   document.getElementById("empty-error-message").hidden = true;
 };
 
-addEventListener("submit", (event) => {
-  event.preventDefault();
-  resetMessage();
+let repeat_email = "";
 
-  let email = document.getElementById("email").value;
+addEventListener(
+  "submit",
+  (event) => {
+    event.preventDefault();
+    resetMessage();
 
-  // TODO: Show Correct Status Messages on Signup Form
-  // 1. successful signup
+    let email = document.getElementById("email").value;
+
+    // TODO: Show Correct Status Messages on Signup Form
+    // 1. successful signup
+
+    if (email.length < 1) {
+      renderEmailEmptyError();
+      return;
+    }
+    if (email === repeat_email) {
+      renderEmailTakenError();
+      return;
+    }
+    for (let item of usersTable) {
+      if (email === item.username) {
+        renderEmailTakenError();
+        return;
+      }
+    }
+    renderSuccess();
+
+    repeat_email = email;
+  }
   // 2. empty email
   // 3. taken email
   // 4. repeat email
-});
+);
 
 let toggleNav = () => {
   var nav = document.getElementById("mobile-nav");
